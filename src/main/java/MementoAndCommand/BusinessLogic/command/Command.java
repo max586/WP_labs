@@ -1,4 +1,6 @@
-package MementoAndCommand;
+package MementoAndCommand.BusinessLogic.command;
+
+import MementoAndCommand.BusinessLogic.Editor;
 
 public abstract class Command {
     Editor editor;

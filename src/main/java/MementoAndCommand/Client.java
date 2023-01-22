@@ -1,8 +1,11 @@
 package MementoAndCommand;
 
+import MementoAndCommand.BusinessLogic.Editor;
+import MementoAndCommand.BusinessLogic.EditorCaretaker;
+import MementoAndCommand.GUI.screens.MainScreen;
+import MementoAndCommand.GUI.screens.Screen;
+
 import java.awt.*;
-import java.util.Arrays;
-import java.util.List;
 
 public class Client {
     public static void main(String[] args) throws ClassNotFoundException, NoSuchFieldException, IllegalAccessException {

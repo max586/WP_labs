@@ -1,4 +1,4 @@
-package MementoAndCommand;
+package MementoAndCommand.GUI;
 
 public enum Controls {
     EXIT_BUTTON,

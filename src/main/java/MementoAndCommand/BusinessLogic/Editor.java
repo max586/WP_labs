@@ -1,10 +1,10 @@
-package MementoAndCommand;
+package MementoAndCommand.BusinessLogic;
 
 import lombok.Getter;
-import lombok.Setter;
 import lombok.ToString;
 
 import java.awt.*;
+import java.time.LocalDateTime;
 
 /**Do all business logic connected with editing the app*/
 public class Editor {
@@ -12,8 +12,6 @@ public class Editor {
     @ToString
     static class EditorSnapshot{
         EditorState state;
-
-
         public EditorSnapshot(EditorState state){
             this.state=state;
         }
@@ -22,8 +20,10 @@ public class Editor {
     EditorState state=new EditorState();
     EditorSnapshot snapshot;
 
+
     public EditorSnapshot save(){
-        this.snapshot= new EditorSnapshot(this.state);
+        this.state.time= LocalDateTime.now();
+        this.snapshot=new EditorSnapshot(this.state.clone());
         return this.snapshot;
     }
     public void restore(EditorSnapshot snapshot){

@@ -1,8 +1,9 @@
-package MementoAndCommand;
+package MementoAndCommand.GUI.screens;
 
-import lombok.Setter;
-
-import java.awt.*;
+import MementoAndCommand.BusinessLogic.command.*;
+import MementoAndCommand.BusinessLogic.Editor;
+import MementoAndCommand.GUI.Controls;
+import MementoAndCommand.GUI.handlers.MouseClickHandler;
 
 public abstract class Screen {
     MouseClickHandler clickHandler;
@@ -27,9 +28,7 @@ public abstract class Screen {
     public void maximizeScreen(){
         new MaximizeCommand(editor).execute();
     }
-    public void resizeScreen(String newSize){
-        new ResizeCommand(editor,newSize).execute();
-    }
+    public void resizeScreen(String newSize){new ResizeCommand(editor,newSize).execute();}
     public void display(){
         editor.display();
     }

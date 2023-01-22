@@ -1,4 +1,6 @@
-package MementoAndCommand;
+package MementoAndCommand.GUI.handlers;
+
+import MementoAndCommand.GUI.Controls;
 
 import java.util.Arrays;
 

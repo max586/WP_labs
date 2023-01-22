@@ -1,4 +1,6 @@
-package MementoAndCommand;
+package MementoAndCommand.BusinessLogic;
+
+import MementoAndCommand.BusinessLogic.Editor;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,8 +21,8 @@ public class EditorCaretaker {
         snapshots.add(editor.save());
     }
     public void showHistory(){
+        System.out.println("snapshot history:");
         for(var snapshot: snapshots){
-            System.out.println("--------------");
             System.out.println(snapshot);
             System.out.println("--------------");
         }
